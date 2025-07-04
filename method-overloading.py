@@ -23,6 +23,17 @@ class Student:
     def show(self):
         print("Hello there!")
 
+    def sum(self, a=None, b=None, c=None):
+        s = 0
+        if a != None and b != None and c != None:
+            s = a + b + c
+        elif a != None and b != None:
+            s = a + b
+        else:
+            s = a
+
+        return s
+
 class B(Student):
     def show(self):
         print("Hello there TWICE!!")
@@ -33,7 +44,10 @@ b.show()
 
 s1 = Student(50, 34, 43)
 s2 = Student(97, 99, 96)
+ss = Student(50,100, 99)
 # s1.show()
+print(ss.sum(15,500))
+
 
 s3 = s1 + s2
 print(s3.m3)
