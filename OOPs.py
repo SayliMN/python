@@ -33,6 +33,20 @@ class Student:
         def show(self):
             print(self.genre, self.nums, self.color)
 
+class PyCharm:
+    def execute(self):
+        print("code is running on PyCharm IDE")
+
+class MyIDE:
+    def execute(self):
+        print("code is running on my IDE")
+        print("Spell checks")
+        print("free for all")
+
+class Laptop:
+    def code(self, ide):
+        ide.execute()
+
 
 s1 = Student('Jay',1,45,60,55)
 s2 = Student('Lata',2,70,96,100)
@@ -41,3 +55,7 @@ print(Student.getSchool())
 print(Student.info())
 s1.show()
 s2.show()
+
+ide = MyIDE()
+lap1 = Laptop()
+lap1.code(ide)
