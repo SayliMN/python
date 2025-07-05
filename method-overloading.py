@@ -48,6 +48,56 @@ class B(Student):
         print("Hello there TWICE!!")
 
 
+from abc import ABC, abstractmethod
+
+
+class Computer(ABC):
+    @abstractmethod
+    def process(self):
+        pass
+
+    @abstractmethod
+    def restart(self):
+        pass
+
+
+class Laptop(Computer):
+    def process(self):
+        print("Processing data...")
+
+    def restart(self):
+        print("Restarting in 3, 2, 1...")
+
+
+class Whiteboard():
+    def write(self):
+        print("writing and not debugging")
+
+
+class IPhone():
+    def application(self, com):
+        print("updating application...")
+        com.process()
+
+
+class Programmer:
+    def work(self, com):
+        print("debugging...")
+        com.process()
+        com.restart()
+
+
+com1 = Laptop()
+# com1.process()
+# com1.restart()
+
+iph1 = IPhone()
+whi1 = Whiteboard()
+prog1 = Programmer()
+
+iph1.application(com1)
+
+
 b = B(50, 34, 43)
 b.show()
 
