@@ -1,3 +1,6 @@
+from abc import ABC, abstractmethod
+
+
 class Student:
     def __init__(self, m1, m2, m3):
         self.m1 = m1
@@ -28,6 +31,7 @@ class Student:
             return True
         else:
             return False
+
     def show(self):
         print("Hello there!")
 
@@ -46,9 +50,6 @@ class Student:
 class B(Student):
     def show(self):
         print("Hello there TWICE!!")
-
-
-from abc import ABC, abstractmethod
 
 
 class Computer(ABC):
